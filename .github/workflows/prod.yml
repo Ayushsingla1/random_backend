@@ -34,6 +34,8 @@ jobs:
           PAT: ${{ secrets.PAT }}
         run: |
           git clone https://github.com/Ayushsingla1/ops.git
+          cd ops
+
           sed -i 's|image: ayushsingla7/k8s-learn:.*|image: ayushsingla7/k8s-learn:${{ github.sha }}' manifest.yml
 
           github config user.username "Github Actions Bot"
