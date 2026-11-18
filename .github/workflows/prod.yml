@@ -38,7 +38,7 @@ jobs:
 
           sed -i 's|image: ayushsingla7/k8s-learn:.*|image: ayushsingla7/k8s-learn:${{ github.sha }}|' manifest.yml
 
-          git config user.username "Github Actions Bot"
+          git config user.name "Github Actions Bot"
           git config user.email "actions@github.com"
           git add .
           git commit -m "update image to ${{ github.sha }}"
